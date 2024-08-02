@@ -98,7 +98,7 @@ async function qr() {
             console.log(
                chalk.bgBlack(
                   chalk.redBright(
-                     "Start with country code of your WhatsApp Number, Example : +94711262551",
+                     "Start with country code of your WhatsApp Number, Example : +94702481115",
                   ),
                ),
             );
@@ -106,7 +106,7 @@ async function qr() {
             phoneNumber = await question(
                chalk.bgBlack(
                   chalk.greenBright(
-                     `Please type your WhatsApp number \nFor example: +94711262551 : `,
+                     `Please type your WhatsApp number \nFor example: +94702481115 : `,
                   ),
                ),
             );
@@ -119,7 +119,7 @@ async function qr() {
          let code = await sock.requestPairingCode(phoneNumber);
          code = code?.match(/.{1,4}/g)?.join("-") || code;
          console.log(
-            chalk.black(chalk.bgGreen(`Your Pairing Code : `)),
+            chalk.black(chalk.bgGreen(`DARK-RIO-MD Pairing Code : `)),
             chalk.black(chalk.white(code)),
          );
       }, 3000);
@@ -143,7 +143,7 @@ async function qr() {
          await sock.sendMessage(
             sock.user.id,
             {
-               text: `> ⚠️ DO NOT SHARE THIS 🎃 DARK-RIO-MD SESSION-ID WITH ANYBODY ❌`,
+               text: `> ⚠️ DO NOT SHARE THIS DARK-RIO-MD SESSION-ID WITH ANYBODY `,
             },
             { quoted: ethix },
          );
